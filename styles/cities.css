@@ -4,10 +4,24 @@ body {
 	background-size: 100%;
 }
 
-.main {
+.main, .info {
 	width: 80%;
-	border-radius: 20px;
 	margin: 5% auto 5% auto;
 	padding: 3%;
+}
+
+.main {
 	text-align: center;
+}
+
+.hide {
+	display: none;
+}
+
+#input, #button, .main, .info {
+	border-radius: 20px;
+}
+
+#input, #button {
+	padding: 3px;
 }
