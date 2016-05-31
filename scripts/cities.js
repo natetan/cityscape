@@ -29,16 +29,16 @@
 	function showInfo() {
 		if (this.status == 200) {
 			var data = JSON.parse(this.responseText);
-			var source = data.landmark;
+			var source = data.image;
 			document.querySelector('.info').classList.remove('hide');
 			document.querySelector('#city').innerHTML = data.city; 
 			document.querySelector('#state').innerHTML = data.state;
-			document.querySelector('#nickname').innerHTML = data.nickname;
-			document.querySelector('#coast').innerHTML = data.coast;
+			document.querySelector('#nickname').innerHTML = "'" + data.nickname + "'";
+			document.querySelector('#coast').innerHTML = data.coast + 'coast';
 			document.querySelector('#city-image').src = '../cityscape/images/' + source + '.jpg';
 			document.querySelector('#city-desc').innerHTML = data.description;
 		} else {
-			showError('Error code: ' + this.status);
+			showError('Error code: ' + this.status + '. City not found');
 		}
 	}
 
