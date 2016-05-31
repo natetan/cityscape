@@ -25,3 +25,7 @@ body {
 #input, #button {
 	padding: 3px;
 }
+
+#nickname {
+	font-style: italic;
+}
