@@ -11,7 +11,7 @@
 				"city" => strtoupper(substr($parts[0], 0, 1)) . substr($parts[0], 1),
 				"state" => $parts[1],
 				"nickname" => $parts[2],
-				"landmark" => $parts[3],
+				"image" => $parts[3],
 				"coast" => $parts[4],
 				"description" => $parts[5],
 			);
@@ -19,6 +19,5 @@
 			print json_encode($data);
 			die();
 		}
-		die();
 	}
 ?>
