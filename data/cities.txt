@@ -1,2 +1,2 @@
 Seattle|Washington|The Rainy City|space-needle|West|I live in this rainy city. It's amazing!
-Manhattan|New York|The Concrete Jungle|empire-state|East| The Big Apple is a truly wondrous place to be
+Manhattan|New York|The Concrete Jungle|midtown|East|The Big Apple is a truly wondrous place to be. Spider-Man lives here and patrols daily.
