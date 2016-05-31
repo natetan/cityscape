@@ -22,7 +22,7 @@
 		if (city == '') {
 			showError('No city input!')
 		} else {
-			makeAjaxRequest(city, '../services/cities.php?city=' + city, showInfo);
+			makeAjaxRequest(city, '../cityscape/services/cities.php?city=' + city, showInfo);
 		}
 	}
 
