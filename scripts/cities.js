@@ -35,7 +35,7 @@
 			document.querySelector('#state').innerHTML = data.state;
 			document.querySelector('#nickname').innerHTML = data.nickname;
 			document.querySelector('#coast').innerHTML = data.coast;
-			document.querySelector('#city-image').src = '../images/' + source + '.jpg';
+			document.querySelector('#city-image').src = '../cityscape/images/' + source + '.jpg';
 			document.querySelector('#city-desc').innerHTML = data.description;
 		} else {
 			showError('Error code: ' + this.status);
