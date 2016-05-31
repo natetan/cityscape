@@ -1,22 +1,24 @@
 <?php 
-	$target_city = $_GET["city"];
+	$target_city = strToLower($_GET["city"]);
 	$cities = "../data/cities.txt";
 	$cities_list = explode("\n", file_get_contents($cities));
 	foreach($cities_list as $city) {
-		if (strToLower($city) == $target_city) {
-			$array = explode("|", $city);
-			list ($target_city, $state, $nickname, $landmark, $coast, $desc) = $array;
+		$parts = explode("|", $city);
+		#print var_dump($parts);
+		if (strToLower($parts[0]) == $target_city) {
+			#list ($target_city, $state, $nickname, $landmark, $coast, $desc) = $city;
 			$data = array(
-				"city" => $target_city,
-				"state" => $state,
-				"nickname" => $nickname,
-				"landmark" => $landmark,
-				"coast" => $coast,
-				"description" => $desc,
+				"city" => strtoupper(substr($parts[0], 0, 1)) . substr($parts[0], 1),
+				"state" => $parts[1],
+				"nickname" => $parts[2],
+				"landmark" => $parts[3],
+				"coast" => $parts[4],
+				"description" => $parts[5],
 			);
-			header("Content-type: application/json");
-			print json_decode($data);
+			#header("Content-type: application/json");
+			print json_encode($data);
 			die();
 		}
+		die();
 	}
 ?>
