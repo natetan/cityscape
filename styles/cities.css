@@ -8,6 +8,7 @@ body {
 	width: 80%;
 	margin: 5% auto 5% auto;
 	padding: 3%;
+	border-radius: 20px;
 }
 
 .main {
@@ -18,8 +19,8 @@ body {
 	display: none;
 }
 
-#input, #button, .main, .info {
-	border-radius: 20px;
+#input, #button {
+	border-radius: 5px;
 }
 
 #input, #button {
