@@ -29,14 +29,14 @@
 	function showInfo() {
 		if (this.status == 200) {
 			var data = JSON.parse(this.responseText);
-			var source = data.image;
+			var source = data.info.image;
 			document.querySelector('.info').classList.remove('hide');
 			document.querySelector('#city').innerHTML = data.city; 
-			document.querySelector('#state').innerHTML = data.state;
-			document.querySelector('#nickname').innerHTML = "'" + data.nickname + "'";
-			document.querySelector('#coast').innerHTML = data.coast + 'coast';
+			document.querySelector('#state').innerHTML = data.info.state;
+			document.querySelector('#nickname').innerHTML = "'" + data.info.nickname + "'";
+			document.querySelector('#coast').innerHTML = data.info.coast + 'coast';
 			document.querySelector('#city-image').src = '../cityscape/images/' + source + '.jpg';
-			document.querySelector('#city-desc').innerHTML = data.description;
+			document.querySelector('#city-desc').innerHTML = data.info.description;
 		} else {
 			showError('Error code: ' + this.status + '. City not found');
 		}
