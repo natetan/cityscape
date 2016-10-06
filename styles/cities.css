@@ -27,6 +27,6 @@ body {
 	padding: 3px;
 }
 
-#nickname {
+#nickname, #current-cities {
 	font-style: italic;
 }
