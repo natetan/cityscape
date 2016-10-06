@@ -23,18 +23,14 @@
 		$city_array = array();
 		foreach($cities_list as $city) {
 			$city_info = explode("|", $city);
-			$info = array(
+			$data[] = array(
+				"city" => strtoupper(substr($city_info[0], 0, 1)) . substr($city_info[0], 1),
 				"state" => $city_info[1],
 				"nickname" => $city_info[2],
 				"image" => $city_info[3],
 				"coast" => $city_info[4],
 				"description" => $city_info[5],
 			);
-			$data = array(
-				"city" => strtoupper(substr($city_info[0], 0, 1)) . substr($city_info[0], 1),
-				"info" => $info,
-			);
-			$city_array[] = array("cities" => $data);
 		}
 		header("Content-type: application/json");
 		print json_encode($data);
