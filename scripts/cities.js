@@ -7,9 +7,10 @@
 	window.onload = function() {
 		document.querySelector('.info').classList.add('hide');
 		document.querySelector('#button').onclick = fetchData;
+		makeAjaxRequest('../cityscape/services/cities.php', showCurrentCities);
 	};
 
-	function makeAjaxRequest(city, url, functionName) {
+	function makeAjaxRequest(url, functionName) {
 		var request = new XMLHttpRequest();
 		request.onload = functionName;
 		request.open("GET", url, true);
@@ -22,7 +23,7 @@
 		if (city == '') {
 			showError('No city input!')
 		} else {
-			makeAjaxRequest(city, '../cityscape/services/cities.php?city=' + city, showInfo);
+			makeAjaxRequest('../cityscape/services/cities.php?city=' + city, showInfo);
 		}
 	}
 
@@ -39,6 +40,19 @@
 			document.querySelector('#city-desc').innerHTML = data.info.description;
 		} else {
 			showError('Error code: ' + this.status + '. City not found');
+		}
+	}
+
+	function showCurrentCities() {
+		if (this.status == 200) {
+			var data = JSON.parse(this.responseText);
+			var cities = data[0].city;
+			for (var i = 1; i < data.length; i++) {
+				cities += ", " + data[i].city;
+			}
+			document.querySelector('#current-cities').innerHTML = 'Only cities available: ' + cities;
+		} else {
+			showError('Error code: ' + this.status);
 		}
 	}
 
