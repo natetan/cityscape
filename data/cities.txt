@@ -1,3 +1,3 @@
 Seattle|Washington|The Rainy City|space-needle|West|I live in this rainy city. It's amazing!
 Manhattan|New York|The Concrete Jungle|midtown|East|The Big Apple is a truly wondrous place to be. Spider-Man lives here and patrols daily.
-Brooklyn|New York|The Borough of Trees|brooklyn-bridge|Southwest|Peter Parker grew up in Forest Hills, Queens.
+Brooklyn|New York|The Borough of Trees|brooklyn-bridge|East|Peter Parker grew up in Forest Hills, Queens.
