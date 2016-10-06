@@ -30,3 +30,7 @@ body {
 #nickname, #current-cities {
 	font-style: italic;
 }
+
+#current-cities {
+	margin-top: 20px;
+}
